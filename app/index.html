@@ -3,20 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cover Snap</title>
+<meta name="description" content="Vice Cover Studio turns your photos into a bold multi-panel poster cover with a sunset or neon grade and big condensed caption lettering, exported as a PNG. Works offline.">
+<title>Vice Cover Studio — GTA-style cover art maker</title>
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+<header class="topbar">
+  <h1>Vice Cover Studio</h1>
+  <p>Your photos, turned into a bold multi-panel poster cover.</p>
+</header>
 <main class="app">
-  <section class="controls">
-    <h1>Cover Snap</h1>
-    <p>A photo and a caption, made into a square cover.</p>
-    <label>Photo <input id="photo" type="file" accept="image/*"></label>
-    <label>Caption <input id="caption" type="text" maxlength="40" value="Sunset Heist"></label>
-    <button id="export" type="button">Export PNG 1080 x 1080</button>
+  <section class="controls" aria-label="Cover controls">
+    <div class="step"><span class="num">1</span><div>
+      <h2>Photos</h2>
+      <label class="filelabel">One photo for all panels
+        <input id="photoall" type="file" accept="image/*">
+      </label>
+      <div id="panelfiles" class="panelfiles"></div>
+      <button id="sample" type="button" class="ghost">Load sample photos</button>
+      <p class="hint">Photos stay on your machine — nothing is uploaded.</p>
+    </div></div>
+    <div class="step"><span class="num">2</span><div>
+      <h2>Layout</h2>
+      <div id="layouts" class="picks" role="group" aria-label="Layout"></div>
+      <h2>Size</h2>
+      <div id="sizes" class="picks" role="group" aria-label="Export size"></div>
+    </div></div>
+    <div class="step"><span class="num">3</span><div>
+      <h2>Caption</h2>
+      <label>Caption <input id="caption" type="text" maxlength="40" value="VICE CITY NIGHTS"></label>
+      <label>Sub-caption <input id="subcaption" type="text" maxlength="60" value="Sunset City • 2026"></label>
+      <label>Caption size <input id="captionsize" type="range" min="0.7" max="1.4" step="0.05" value="1"></label>
+      <div id="positions" class="picks" role="group" aria-label="Caption position"></div>
+    </div></div>
+    <div class="step"><span class="num">4</span><div>
+      <h2>Grade</h2>
+      <div id="grades" class="picks" role="group" aria-label="Colour grade"></div>
+      <p id="panellabel" class="hint" role="status"></p>
+      <label>Zoom selected panel <input id="zoom" type="range" min="1" max="2.5" step="0.05" value="1"></label>
+      <button id="resetpan" type="button" class="ghost">Reset panel crop</button>
+    </div></div>
+    <button id="export" type="button" class="export">Export PNG</button>
     <p id="status" role="status"></p>
   </section>
-  <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
+  <section class="preview" aria-label="Live preview">
+    <canvas id="cover" width="1920" height="1080" aria-label="The cover preview"></canvas>
+    <p class="hint">Click a panel to select it, then drag on the cover to pan it.</p>
+    <p class="fineprint">Original design, made with your own photos. No game logos, artwork or fonts are used — the lettering is a system font stack and the samples are image-model scenes.</p>
+  </section>
 </main>
 <script type="module" src="./src/main.js"></script>
 </body>

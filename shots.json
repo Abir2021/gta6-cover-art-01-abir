@@ -1,5 +1,1 @@
-[
-  { "name": "1-cover.jpg", "query": "?shot=cover&photo=pier&caption=Sunset%20Heist", "w": 1080, "h": 1080 },
-  { "name": "2-editor.jpg", "query": "?shot=editor&photo=boulevard&caption=Boulevard%20Queen", "w": 1280, "h": 720 },
-  { "name": "3-cover.jpg", "query": "?shot=cover&photo=boulevard&caption=Boulevard%20Queen", "w": 1080, "h": 1080 }
-]
+[{"h":1080,"name":"1-cover.jpg","query":"?shot=cover&photo=pier&photo2=boulevard&caption=VICE%20CITY%20NIGHTS&sub=Sunset%20City%20%E2%80%A2%202026&layout=mosaic&grade=sunset&size=landscape","w":1920},{"h":800,"name":"2-editor.jpg","query":"?shot=editor&photo=boulevard&photo2=pier&caption=VICE%20CITY%20NIGHTS&sub=Sunset%20City%20%E2%80%A2%202026&layout=mosaic&grade=sunset&size=landscape","w":1280},{"h":1350,"name":"3-cover-portrait.jpg","query":"?shot=cover&photo=neon&photo2=pier&caption=NEON%20BOULEVARD&sub=After%20dark%20%E2%80%A2%20Sunset%20City&layout=strip&grade=neon&size=portrait","w":1080},{"h":1080,"name":"4-cover-square.jpg","query":"?shot=cover&photo=boulevard&photo2=neon&caption=BOULEVARD%20QUEEN&sub=Palms%20%26%20pavement&layout=split&grade=teal&size=square","w":1080}]
